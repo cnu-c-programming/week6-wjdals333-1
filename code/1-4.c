@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main() {
     int arr3[2][3][4]= {0};
 
