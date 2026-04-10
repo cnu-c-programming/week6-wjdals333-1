@@ -1,16 +1,17 @@
+
+#include <stdio.h>
+
 int main() {
-    int arr3[2][3][4]= {0};
+    char *name[5] = {"kim", "lee", "park", "choi", "jeong"};
 
-    int (*p)[3][4] = arr3;
-
-    printf("%zu\n", sizeof(p));
-    printf("%zu\n", sizeof(*p));
-    printf("%zu\n", sizeof(**p));
-    printf("%zu\n", sizeof(***p));
-
-    printf("%p\n", (void*)p);
-    printf("%p\n", (void*)*p);
-    printf("%p\n", (void*)**p);
-    printf("%d\n", ***p);
-    
+    for (int i=0; i<5; i++) {
+        for (int j=0; ; j++) {
+            char c = *((*(name+i))+j);
+            if (c == '\0') {
+                break;
+            }
+            printf("%c", c);
+        }
+        printf("\n");
+    }
 }
